@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start_time: 2016-04-06 18:21:54
+  end_time: 2016-04-06 18:21:54
+  employer_id_id: 
+
+two:
+  title: MyString
+  start_time: 2016-04-06 18:21:54
+  end_time: 2016-04-06 18:21:54
+  employer_id_id: 
