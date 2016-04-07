@@ -1,6 +1,10 @@
 class Api::V2::JobsController < Api::V2::BaseController
   private
 
+  def resources
+    super.includes(:shifts)
+  end
+
   def resource_class
     Job
   end

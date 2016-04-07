@@ -27,5 +27,7 @@ module JsonCacheTest
       generate.helper false
       generate.assets false
     end
+
+    config.cache_store = :dalli_store, nil, {namespace: "json-cache-test-#{Rails.env}", pool_size: 5, serializer: JSON}
   end
 end

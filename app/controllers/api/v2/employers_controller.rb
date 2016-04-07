@@ -1,6 +1,10 @@
 class Api::V2::EmployersController < Api::V2::BaseController
   private
 
+  def included_associations
+    '*'
+  end
+
   def resource_class
     Employer
   end

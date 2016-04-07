@@ -9,6 +9,10 @@ class Api::V2::EventsController < Api::V2::BaseController
     Event
   end
 
+  def resources
+    super.includes(:employer, jobs: :shifts)
+  end
+
   def resource_params
     params.require(:event).permit(:title)
   end

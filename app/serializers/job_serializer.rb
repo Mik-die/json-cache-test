@@ -1,5 +1,7 @@
 class JobSerializer < ActiveModel::Serializer
-  attributes :id, :title, :pay_rate
+  cache
+
+  attributes :id, :title, :pay_rate, :created_at, :updated_at
 
   belongs_to :employer
   has_many :shifts

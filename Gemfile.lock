@@ -44,6 +44,8 @@ GEM
     builder (3.2.2)
     byebug (8.2.2)
     concurrent-ruby (1.0.1)
+    connection_pool (2.2.0)
+    dalli (2.7.6)
     erubis (2.7.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -52,6 +54,7 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kgio (2.10.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -111,7 +114,10 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (= 0.10.0.rc5)
   byebug
+  connection_pool
+  dalli
   kaminari
+  kgio
   rails (= 4.2.6)
   spring
   sqlite3
