@@ -1,10 +1,10 @@
 class Api::V2::BaseController < ApplicationController
   def index
-    render json: paginate(resources)
+    render json: paginate(resources), include: included_associations
   end
 
   def show
-    render json: resource
+    render json: resource, include: included_associations
   end
 
   def create
@@ -31,6 +31,10 @@ class Api::V2::BaseController < ApplicationController
   end
 
   private
+
+  def included_associations
+    '*'
+  end
 
   def resource
     resource_class.find params[:id]
